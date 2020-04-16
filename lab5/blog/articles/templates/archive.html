@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title></title>
+        <link rel="stylesheet" type="text/css" href="/static/article.css">
+    </head>
+    <body>
+    <img src="/static/gggg.jpg"width="700" height="30"/>
+    <h1></h1>
+    <div class="header">
+    </div>
+    <div class="archive">
+
+    </div>
+ {% for post in posts %}
+    <div class="one-post">
+      <a href="{% url 'post_new' %}" class="post-title"><span class="glyphicon glyphicon-plus"></span></a>
+      <a href="//127.0.0.1:8000/article/{{post.id}}"><h2 class="post-title">{{ post.title }}</h2></a>
+        <div class="article-info">
+           <big><b><div class="article-author">{{ post.author.username }}</div></b></big>
+            <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+        <p class="article-text">{{ post.get_excerpt }}</p>
+    </div>
+ {% endfor %}
+    </body>
+</html>

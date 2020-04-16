@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #RedBoxTwoText{margin:-10px 1050px;  width:500px;}
+        </style>
+        <title>Архив всех статей</title>
+        <link rel="stylesheet" type="text/css" href="/static/article.css">
+    </head>
+    <body>
+
+    <img src="/static/gggg.jpg"width="800" height="100"/>
+    <div id="RedBoxTwoText"><a href="//127.0.0.1:8000/"><p align="right"><h8>Все статьи</h8></p></a>
+    </div>
+
+    <div class="header">
+
+    </div>
+    <div class="archive">
+    </div>
+    <div class="one-post">
+        <h1 style="font-size: 60px" class="post-title"><b>{{ post.title }}</b></h1>
+        <div class="article-info">
+            <div style="font-size: 15px" class="article-author"><b>{{ post.author.username }}</b></div>
+            <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+
+        <p class="article-text">{{ post.get_excerpt }}</p>
+    </div>
+    </body>
+</html>
